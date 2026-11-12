@@ -1,0 +1,160 @@
+  tbl   | total | order_status | order_purchase_timestamp | order_approved_at | order_delivered_carrier_date | order_delivered_customer_date | order_estimated_delivery_date 
+--------+-------+--------------+--------------------------+-------------------+------------------------------+-------------------------------+-------------------------------
+ orders | 99441 |            0 |                        0 |               160 |                         1783 |                          2965 |                             0
+(1 строка)
+
+   tbl    | total | product_category_name | product_name_lenght | product_description_lenght | product_photos_qty | product_weight_g | product_length_cm | product_height_cm | product_width_cm 
+----------+-------+-----------------------+---------------------+----------------------------+--------------------+------------------+-------------------+-------------------+------------------
+ products | 32951 |                     0 |                 610 |                        610 |                610 |                2 |                 2 |                 2 |                2
+(1 строка)
+
+      tbl      | total | review_score | review_comment_title | review_comment_message | review_creation_date | review_answer_timestamp 
+---------------+-------+--------------+----------------------+------------------------+----------------------+-------------------------
+ order_reviews | 69610 |            0 |                    0 |                      0 |                    0 |                       0
+(1 строка)
+
+ empty_category | empty_title | empty_message 
+----------------+-------------+---------------
+            610 |       61355 |         40864
+(1 строка)
+
+ cnt_all | cnt_delivered_date | diff 
+---------+--------------------+------
+   99441 |              96476 | 2965
+(1 строка)
+
+ order_status | cnt_all | cnt_delivered_date | no_date 
+--------------+---------+--------------------+---------
+ shipped      |    1107 |                  0 |    1107
+ canceled     |     625 |                  6 |     619
+ unavailable  |     609 |                  0 |     609
+ invoiced     |     314 |                  0 |     314
+ processing   |     301 |                  0 |     301
+ delivered    |   96478 |              96470 |       8
+ created      |       5 |                  0 |       5
+ approved     |       2 |                  0 |       2
+(8 строк)
+
+ eq_null 
+---------
+       0
+(1 строка)
+
+ ne_null 
+---------
+       0
+(1 строка)
+
+ is_null 
+---------
+    2965
+(1 строка)
+
+ is_not_null 
+-------------
+       96476
+(1 строка)
+
+ a | b | eq | ne | is_distinct | is_not_distinct 
+---+---+----+----+-------------+-----------------
+ 1 | 1 | t  | f  | f           | t
+ 1 | 2 | f  | t  | t           | f
+ 1 |   |    |    | t           | f
+   | 1 |    |    | t           | f
+   |   |    |    | f           | t
+(5 строк)
+
+ ne_cnt 
+--------
+  96476
+(1 строка)
+
+ is_distinct_cnt 
+-----------------
+           99441
+(1 строка)
+
+                id                
+----------------------------------
+ 00010242fe8c5a6d1ba2dd792cb16214
+ 
+(2 строки)
+
+ not_in_cnt 
+------------
+          0
+(1 строка)
+
+ not_exists_cnt 
+----------------
+          99440
+(1 строка)
+
+ not_in_without_null_cnt 
+-------------------------
+                   99440
+(1 строка)
+
+ orders_filter_in_on 
+---------------------
+               99441
+(1 строка)
+
+ orders_filter_in_where 
+------------------------
+                  53608
+(1 строка)
+
+ orders_without_good_review 
+----------------------------
+                      45833
+(1 строка)
+
+            review_id             | review_score |                               raw_text                                |                             coalesce_only                             |                             comment_text                              
+----------------------------------+--------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------
+ 0001239bc1de2e33cb583967c2ca4c67 |            5 |                                                                       |                                                                       | (Р±РµР· РєРѕРјРјРµРЅС‚Р°СЂРёСЏ)
+ 0001cc6860aeaf5b9017fe4131a52e62 |            5 |                                                                       |                                                                       | (Р±РµР· РєРѕРјРјРµРЅС‚Р°СЂРёСЏ)
+ 00020c7512a52e92212f12d3e37513c0 |            5 | A entrega foi super rГЎpida e o pendente Г© lindo! Igual a foto mesmo!  | A entrega foi super rГЎpida e o pendente Г© lindo! Igual a foto mesmo!  | A entrega foi super rГЎpida e o pendente Г© lindo! Igual a foto mesmo! 
+ 00032b0141443497c898b3093690af51 |            5 |                                                                       |                                                                       | (Р±РµР· РєРѕРјРјРµРЅС‚Р°СЂРёСЏ)
+ 00034d88989f9a4c393bdcaec301537f |            5 |                                                                       |                                                                       | (Р±РµР· РєРѕРјРјРµРЅС‚Р°СЂРёСЏ)
+ 00046a69550325aea5fb89f65c7387f2 |            5 | GOSTEI DA CAPINHA DE CELULAR, VEIO COMO EU ESPERAVA.                  | GOSTEI DA CAPINHA DE CELULAR, VEIO COMO EU ESPERAVA.                  | GOSTEI DA CAPINHA DE CELULAR, VEIO COMO EU ESPERAVA.
+ 0005949d4c047d64863a6874338139ba |            5 | Bom eu jГЎ sabia que era,mas Г© muito bonito.recomendo.                 | Bom eu jГЎ sabia que era,mas Г© muito bonito.recomendo.                 | Bom eu jГЎ sabia que era,mas Г© muito bonito.recomendo.
+ 0005bc906dfe3b73261020bf8e9b76cf |            5 | Muito bom                                                             | Muito bom                                                             | Muito bom 
+ 000688fa7009b3c9fafe4950b37cbc81 |            5 | Meu sait preferido                                                    | Meu sait preferido                                                    | Meu sait preferido 
+ 000932bcd6959ac688b310abead1acb8 |            4 |                                                                       |                                                                       | (Р±РµР· РєРѕРјРјРµРЅС‚Р°СЂРёСЏ)
+(10 строк)
+
+ items_total | zero_price | avg_freight_to_price 
+-------------+------------+----------------------
+      112650 |          0 |               0.3209
+(1 строка)
+
+             metric             | bad_cnt | total | share_pct 
+--------------------------------+---------+-------+-----------
+ products: no category          |     610 | 32951 |      1.85
+ order_reviews: no comment text |   40864 | 69610 |     58.70
+ orders: no delivery date       |    2965 | 99441 |      2.98
+(3 строки)
+
+ order_status | cnt  
+--------------+------
+ shipped      | 1107
+ canceled     |  619
+ unavailable  |  609
+ invoiced     |  314
+ processing   |  301
+ delivered    |    8
+ created      |    5
+ approved     |    2
+(8 строк)
+
+ delivered_without_date 
+------------------------
+                      8
+(1 строка)
+
+ sold_items_null_category | sold_items_empty_category 
+--------------------------+---------------------------
+                        0 |                      1603
+(1 строка)
+
