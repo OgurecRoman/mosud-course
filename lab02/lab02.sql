@@ -123,7 +123,6 @@ SELECT
                          EXCEPT
                          (SELECT product_id FROM set_a INTERSECT SELECT product_id FROM set_b)) t4)
     AS intersect_diff_ba_ab;
--- A ∪ B = B ∪ A и A ∩ B = B ∩ A
 
 -- 6. Некоммутативность разности
 
