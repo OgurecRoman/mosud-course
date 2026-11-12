@@ -1,0 +1,49 @@
+             order_id             | customer_state |     customer_city     | n_items | items_sum | freight_sum | n_sellers | seller_states | n_payments | paid_sum | n_reviews | avg_score 
+----------------------------------+----------------+-----------------------+---------+-----------+-------------+-----------+---------------+------------+----------+-----------+-----------
+ 00010242fe8c5a6d1ba2dd792cb16214 | RJ             | campos dos goytacazes |       1 |     58.90 |       13.29 |         1 | SP            |          1 |    72.19 |         1 |      5.00
+ 00018f77f2f0320c557190d7a144bdd3 | SP             | santa fe do sul       |       1 |    239.90 |       19.93 |         1 | SP            |          1 |   259.83 |         1 |      4.00
+ 000229ec398224ef6ca0657da4fc703e | MG             | para de minas         |       1 |    199.00 |       17.87 |         1 | MG            |          1 |   216.87 |         1 |      5.00
+ 00024acbcdf0a6daa1e931b038114c75 | SP             | atibaia               |       1 |     12.99 |       12.79 |         1 | SP            |          1 |    25.78 |         1 |      4.00
+ 00042b26cf59d7ce69dfabb4e55b4fd9 | SP             | varzea paulista       |       1 |    199.90 |       18.14 |         1 | PR            |          1 |   218.04 |         1 |      5.00
+ 00048cc3ae777c65dbb7d2a0634bc1ea | MG             | uberaba               |       1 |     21.90 |       12.69 |         1 | SP            |          1 |    34.59 |         1 |      4.00
+ 00054e8431b9d7675808bcb819fb4a32 | SP             | guararapes            |       1 |     19.90 |       11.85 |         1 | SP            |          1 |    31.75 |           |          
+ 000576fe39319847cbb9d288c5617fa6 | SP             | praia grande          |       1 |    810.00 |       70.75 |         1 | SP            |          1 |   880.75 |           |          
+ 0005a1a1728c9d785b8e2b08b904576c | SP             | santos                |       1 |    145.95 |       11.65 |         1 | SP            |          1 |   157.60 |         1 |      1.00
+ 0005f50442cb953dcd1d21e1fb923495 | SP             | jandira               |       1 |     53.99 |       11.40 |         1 | SP            |          1 |    65.39 |         1 |      4.00
+(10 строк)
+
+ delivered_orders | passport_rows 
+------------------+---------------
+            96478 |         96478
+(1 строка)
+
+ delivered_orders | with_payments | with_reviews | without_payments | without_reviews 
+------------------+---------------+--------------+------------------+-----------------
+            96478 |         96477 |        67510 |                1 |           28968
+(1 строка)
+
+ no_review_left_join 
+---------------------
+               29979
+(1 строка)
+
+ no_review_not_exists 
+----------------------
+                29979
+(1 строка)
+
+ rows_wrong | price_sum_wrong 
+------------+-----------------
+     115035 |     13813828.71
+(1 строка)
+
+ rows_correct | price_sum_correct 
+--------------+-------------------
+       110197 |       13221498.11
+(1 строка)
+
+ rows_fixed | price_sum_fixed |  paid_sum   
+------------+-----------------+-------------
+      96477 |     13221363.14 | 15422461.77
+(1 строка)
+

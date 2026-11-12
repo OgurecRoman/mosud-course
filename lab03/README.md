@@ -1,7 +1,7 @@
 # Практическая работа №3
 
 Вариант 10: отношение `products`, предикат `category IS NOT NULL` и объём `length·height·width > 20 000 см³`.
-Запуск: `psql -U postgres -d olist -f lab03.sql`
+Запуск: `psql -U postgres -d olist -q -o result.txt -f lab03.sql`
 
 ## Реляционное выражение
 
